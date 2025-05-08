@@ -1,5 +1,5 @@
 # Todo Board
 
-# Setup
+## Setup
 
 Before starting development, run initial-setup.sh
