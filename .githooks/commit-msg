@@ -1,0 +1,6 @@
+#!/bin/sh
+
+test "" != "$(egrep '^(Feature|Chore|Bug|Refactor)-[[:alnum:]_]+:[[:space:]](Add|Remove|Fix|Refactor)[[:space:]]([[:alnum:]]|[[:space:]])+' "$1")" || {
+    echo >&2 Commit message requires to follow the pattern: Feature/Chore/Bug/Refactor-\<featurename\>: Add/Remove/Fix/Refactor \<description\>
+    exit 1
+}
